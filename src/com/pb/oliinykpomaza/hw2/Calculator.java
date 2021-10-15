@@ -1,4 +1,4 @@
-package com.pb.oliinykpomaza.hw2;
+package com.pb.pomaza.hw2;
 
 import java.util.Scanner;
 
