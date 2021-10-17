@@ -1,4 +1,4 @@
-package com.pb.pomaza.hw2;
+package com.pb.oliinykpomaza.hw2;
 
 import java.util.Scanner;
 
@@ -31,11 +31,12 @@ public class Calculator {
                 break;
 
             case "/":
-                System.out.println(+(operand1 / operand2));
             {
                 if (operand2 == 0) ;
                 System.out.println("На ноль делить нельза ");
             }
+                System.out.println(+(operand1 / operand2));
+
             break;
 
             default: {
