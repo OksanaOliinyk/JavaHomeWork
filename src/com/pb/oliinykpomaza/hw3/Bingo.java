@@ -4,27 +4,34 @@ import java.util.Scanner;
 
 public class Bingo {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int UnknownNumber;
-        int UserNumber;
-        int TrysCount = 0;
-        Scanner input = new Scanner(System.in);
-        System.out.println("ЗАДАЧА: Угадать целое число (от 0 до 100).");
-        System.out.println("для выхода введите exit");
         UnknownNumber = (52);
-        do {
-            TrysCount++;
-            System.out.print("Введите ваше число: ");
-            UserNumber = input.nextInt();
-            if (UserNumber > UnknownNumber)
-                System.out.println("Моё число меньше.");
-            else if (UserNumber < UnknownNumber)
-                System.out.println("Моё число больше.");
-            else System.out.println("Вы угадали!");
-            if (input.equals("exit")) {
+        int count = 0;
+        System.out.println("Угадайте число от 0 до 100");
+        System.out.println("для выхода введите exit");
+        while(true){
+            System.out.print("Введите число:  ");
+            String data = sc.next();
+            if (data.equals("exit")){
                 break;
             }
-        } while (UserNumber != UnknownNumber);
-        System.out.println("Количество попыток: " + TrysCount);
+            int num = Integer.parseInt(data);
+            count++;
+            if (num != UnknownNumber){
+                if (num < UnknownNumber){
+                    System.out.println(num + " наше число больше");
+                }
+                else {
+                    System.out.println(num + " наше число меньше");
+                }
+            }
+            else {
+                System.out.println("Вы победили!!!  " + num + ". число попыток - " + count);
+                break;
+            }
+
+        }
+        System.out.println("Игра окончена !");
     }
 }
-
