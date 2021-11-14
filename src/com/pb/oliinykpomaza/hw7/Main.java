@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Clothes[] clothes = {
                 new TeeShirt(Sizes.XS, "серый", 650),
-                new TeeShirt(Sizes.L, "черный", 850),
+                new TeeShirt(Sizes.L, "малиновый", 850),
                 new Pants(Sizes.M, "синий", 900),
                 new Pants(Sizes.XXS, "желтый", 705),
                 new Skirt(Sizes.S, "фиолетовый", 500),
