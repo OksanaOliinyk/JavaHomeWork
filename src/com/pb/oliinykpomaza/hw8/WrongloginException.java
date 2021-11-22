@@ -1,14 +1,14 @@
 package com.pb.oliinykpomaza.hw8;
 
- public class WrongloginException extends Exception {
+ class WrongLoginException extends Exception {
     private String detail;
 
-    public void WrongLoginException() {
+    public WrongLoginException() {
         detail = "Incorrect login";
     }
 
-    public void WrongLoginException(String message) {
-
+    public WrongLoginException(String message) {
+        super(message);
         detail = message;
     }
 

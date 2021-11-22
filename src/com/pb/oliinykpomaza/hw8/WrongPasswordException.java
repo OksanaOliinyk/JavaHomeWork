@@ -1,6 +1,5 @@
 package com.pb.oliinykpomaza.hw8;
-
-public class WrongPasswordException extends Exception {
+class WrongPasswordException extends Exception {
     private String detail;
 
     public WrongPasswordException() {

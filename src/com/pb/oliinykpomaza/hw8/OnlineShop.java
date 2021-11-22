@@ -1,7 +1,7 @@
 package com.pb.oliinykpomaza.hw8;
 
-public class OnlineShop extends Auth {
+public class OnlineShop {
     public static void main (String[] args) {
-        new Auth ();
+        new Login ();
     }
 }
