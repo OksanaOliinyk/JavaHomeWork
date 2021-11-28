@@ -1,42 +1,43 @@
 package com.pb.oliinykpomaza.hw10;
 
 
-
-public class NumBox <T extends Number>{
-    private T[] number;
+import java.util.*;
+public class NumBox<T extends Number> {
+    private List<T> arr;
+    private final int size;
     public NumBox(int size) {
-        this.number = (T[]) new Number[size];
+        this.size = size;
+        arr = new ArrayList<>(size);
     }
-    public int lenght(){
-        int i = 0
-                for (T n: number) {
-                    if (n == null) {
-                        break;
-                    }
-                    i++;
-                    if (i== number.length) {
-                        System.out.println("Массив заполнен");
-                        break;
-                    }
-                }
-                return i;
+    public void add(T num) {
+        if (arr.size() <= size-1)
+            arr.add(num);
+        else throw new ArrayIndexOutOfBoundsException();
+    }
+    public int length() {
+        return arr.toArray().length;
     }
 
     public double average() {
-        double average;
         double sum = 0;
-        int i = 0;
-        for (T n: number) {
-            if (n != null) {
-                Double nNew = (Double) n;
-                double nNum = nNew.doubleValue();
-                sum += nNum;
-                i++;
-            }
-            else break;
+        for (T n : arr)  {
+            sum += n.doubleValue();
         }
-        average = sum / i;
-        return average; // подсчет среднего арифметического массива
+        return sum / arr.size();
     }
-
+    public double sum() {
+        double sum = 0;
+        for (T n : arr)  {
+            sum += n.doubleValue();
+        }
+        return sum;
+    }
+    public T max() {
+        T maxValue = arr.get(0);
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i).doubleValue() > maxValue.doubleValue())
+                maxValue = arr.get(i);
+        }
+        return maxValue;
+    }
 }
