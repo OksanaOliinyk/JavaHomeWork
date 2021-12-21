@@ -1,0 +1,19 @@
+[ {
+  "name" : "Vi",
+  "dateBirthday" : 1638968483070,
+  "phone" : [7985654, 345678 ],
+  "address" : "Ternopol",
+  "dateEdit" : 1638968483070
+}, {
+  "name" : "Oleg",
+  "dateBirthday" : 16389684987670,
+  "phone" : [45656456 ],
+  "address" : "lviv",
+  "dateEdit" : 1638968483070
+}, {
+  "name" : "Oksana",
+  "dateBirthday" : 1638968483071,
+  "phone" : [456787896 ],
+  "address" : "Dnipro",
+  "dateEdit" : 163896878965
+} ]
